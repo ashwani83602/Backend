@@ -1,11 +1,15 @@
 {
+  "type": "module",
   "name": "chai-backend-2",
   "version": "1.0.0",
   "description": "Youtube clone ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev":"nodemon src/index.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
 }
