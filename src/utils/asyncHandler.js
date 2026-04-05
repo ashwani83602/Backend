@@ -1,12 +1,11 @@
-export { asyncHandler };
-
 const asyncHandler = (reqestHandler) => {
-  (req, res, next) => {
+  return (req, res, next) => {
     Promise.resolve(reqestHandler(req, res, next)).catch((error) =>
       next(error)
     );
   };
 };
+export { asyncHandler };
 // const asyncHandle = () => {};
 // const asyncHandle = (function) => ()=>{}
 // const asyncHandle = (function) => async ()=>{}

@@ -17,3 +17,9 @@ app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 app.use(express.static("public")); // for storing files in folder
 // for access and set cookies in browser
 app.use(cookieParser());
+
+// routes (segrigation of file)
+import userRouter from "./routes/user.routes.js";
+
+app.use("/api/v1/users", userRouter);
+export { app };
